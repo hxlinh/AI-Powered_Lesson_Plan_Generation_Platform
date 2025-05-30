@@ -1,0 +1,263 @@
+:root {
+  --primary-gradient: linear-gradient(90deg, #4776E6, #8E54E9);
+  --secondary-gradient: linear-gradient(to bottom right, #4776E6, #8E54E9);
+  --text-gradient: linear-gradient(90deg, #4776E6, #8E54E9, #5E7CE2, #8E54E9);
+  --background-color: #121212;
+  --card-background: #1E1E1E;
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --transition: all 0.3s ease;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding: 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.home-page__header h1 {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  background-image: var(--text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.home-page__header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: -0.3px;
+}
+
+.home-page__header {
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.create-btn {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 2rem;
+  border: none;
+  box-shadow: var(--box-shadow);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.create-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(71, 118, 230, 0.4);
+}
+
+.box-item {
+  text-decoration: none;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  transition: var(--transition);
+  width: 100%;
+  max-width: 350px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.box-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(142, 84, 233, 0.3);
+}
+
+.course {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.course__info {
+  background: var(--secondary-gradient);
+  color: var(--text-primary);
+  padding: 25px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course__info h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.course__info p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.course__action {
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  display: flex;
+}
+
+.course__action button {
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.course__action button:first-child {
+  border-right: 1px solid var(--border-color);
+}
+
+.course__action button:hover {
+  background: rgba(71, 118, 230, 0.2);
+}
+
+/* Modal styles */
+.book-info-modal {
+  width: 80%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: var(--card-background);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+}
+  
+.book-info-modal .form-group {
+  margin-bottom: 1.5rem;
+}
+  
+.book-info-modal label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+  
+.book-info-modal .form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.book-info-modal .form-control:focus {
+  border-color: #4776E6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(71, 118, 230, 0.2);
+}
+  
+.book-info-modal textarea.form-control {
+  resize: vertical;
+  min-height: 300px;
+  font-family: monospace;
+  line-height: 1.5;
+}
+  
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+  
+.cancel-btn, .confirm-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+  
+.cancel-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.cancel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+  
+.confirm-btn {
+  background: var(--primary-gradient);
+  color: white;
+}
+  
+.confirm-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(71, 118, 230, 0.4);
+}
+  
+.confirm-btn:disabled {
+  background: #3a3a3a;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Remove underlines */
+a, .box-item, button, .create-btn, any-element-with-underline {
+  text-decoration: none;
+}
+
+/* If you specifically want to target links inside specific components */
+.course__info a,
+.home-page__header a,
+.course__action a {
+  text-decoration: none;
+}
+
+/* For any hover states that might add underlines */
+a:hover,
+.box-item:hover,
+button:hover {
+  text-decoration: none;
+}

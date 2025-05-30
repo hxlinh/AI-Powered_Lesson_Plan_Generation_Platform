@@ -1,0 +1,184 @@
+.book-info-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .book-info-modal-container {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .book-info-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+  }
+  
+  .book-info-modal-header h2 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .book-info-modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #cccccc;
+  }
+  
+  .book-info-modal-body {
+    margin-bottom: 20px;
+  }
+  
+  .book-info-form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .book-info-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+    font-weight: bold;
+  }
+  
+  .book-info-form-control {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .book-info-form-control:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+  }
+  
+  textarea.book-info-form-control {
+    resize: vertical;
+    min-height: 300px;
+    font-family: monospace;
+  }
+  
+  .book-info-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .book-info-cancel-btn, .book-info-confirm-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .book-info-cancel-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .book-info-cancel-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .book-info-confirm-btn {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .book-info-confirm-btn:hover {
+    background-color: #357abd;
+  }
+  
+  .book-info-modal-container {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 12px;
+    width: 95%;
+    max-width: 1200px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Thêm style cho layout hai cột */
+  .book-info-modal-content {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .book-info-form-section {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .book-info-pdf-preview {
+    flex: 1;
+    min-width: 300px;
+    background-color: #2a2a2a;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+  }
+  
+  .pdf-iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    border: none;
+  }
+  
+  .pdf-placeholder {
+    color: #cccccc;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 992px) {
+    .book-info-modal-content {
+      flex-direction: column;
+    }
+    
+    .book-info-pdf-preview {
+      min-height: 400px;
+    }
+    
+    .pdf-iframe {
+      min-height: 400px;
+    }
+  }
+  

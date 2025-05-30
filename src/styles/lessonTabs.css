@@ -1,0 +1,55 @@
+.lesson-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .lesson-tab {
+    background-color: #444548;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .lesson-tab.completed:hover {
+    background-color: #555659;
+  }
+  
+  .lesson-tab.loading {
+    background-color: #37383b;
+    cursor: not-allowed;
+    opacity: 0.8;
+  }
+  
+  .lesson-tab.error {
+    background-color: #5c3030;
+    cursor: not-allowed;
+  }
+  
+  .lesson-tab.pending {
+    background-color: #333;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  .loading-dots {
+    display: inline-block;
+    animation: loadingDots 1.4s infinite both;
+  }
+  
+  @keyframes loadingDots {
+    0%, 80%, 100% { opacity: 0.2; }
+    40% { opacity: 1; }
+  }
+  
+  .error-icon {
+    color: #ff4d4f;
+  }
+  

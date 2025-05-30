@@ -1,0 +1,1 @@
+print(config_parser.generate_config_dict())
