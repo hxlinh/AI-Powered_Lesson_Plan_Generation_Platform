@@ -1,9 +1,9 @@
-# Chatbot Application with Fine-Tuned AI using RAG
+# AI-Powered Lesson Plan Generation Platform using fine-tuned AI and RAG
 
 ## Overview
 <img width="1156" alt="Ảnh màn hình 2025-04-09 lúc 22 20 54" src="https://github.com/user-attachments/assets/71ed837d-195a-43b6-bfa9-321bcd68105e" />
 
-This application features a chatbot built using the Retrieval-Augmented Generation (RAG) technique. It is powered by a fine-tuned **Llama-3.1-8B-Instruct** model and is developed with **React** for the frontend interface. The chatbot offers conversational capabilities designed to improve user interaction by retrieving and generating contextually relevant responses.
+A web platform using generative AI to help instructors quickly create lesson plans and find information within teaching materials.
 
 ## Features
 
@@ -14,7 +14,7 @@ This application features a chatbot built using the Retrieval-Augmented Generati
 
 ## Demo
 
-Check out the video demonstration of the app here: [Video Demo](https://drive.google.com/file/d/1AHNyxwnMeCjUi0g93vWwn40xGLGDtDpd/view?usp=sharing).
+Check out the video demonstration of the app here: [Video Demo]([https://drive.google.com/file/d/1AHNyxwnMeCjUi0g93vWwn40xGLGDtDpd/view?usp=sharing](https://drive.google.com/file/d/1MEsqfNTqbhqYnghlhjt3hzBjzc0jCMvo/view?usp=sharing)).
 
 ## How It Works
 
