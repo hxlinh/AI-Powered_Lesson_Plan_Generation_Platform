@@ -17,53 +17,16 @@ import openai
 import pypdf
 import pytesseract
 from PIL import Image
+from dotenv import load_dotenv
+
+load_dotenv()
+openai_api_key = os.getenv("OPENAI_API_KEY")
 
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "/Users/admin/Code/AI_CHAT/lesson_plan/src/models/classifier/model.h5")
 
-# client = OpenAI(base_url="http://192.168.100.80:1234/v1", api_key="lm_studio")
-# MODEL = "meta=llama-3.1-8b-instruct-finetuned"
-# def convert_pdf(pdf_path):
-#     config = {
-#         "page_range": [0, 1, 2, 3, 4],
-#         "processors": "torch.mps",
-#         "output_format": "markdown",
-#     }
-#     config_parser = ConfigParser(config)
-#     converter = PdfConverter(
-#         config={
-#         "page_range": [0, 1, 2, 3, 4],
-#         "processors": "torch.mps",
-#         "output_format": "markdown",
-#         },
-#         artifact_dict=create_model_dict(),
-#         renderer=config_parser.get_renderer(),
-#         llm_service=config_parser.get_llm_service()
-#     )
-#     rendered = converter(pdf_path)
-#     text, _, images = text_from_rendered(rendered)
-#     return text
-
-# def get_book_name(path):
-#     page=convert_pdf(path)
-#     message = [
-#         {
-#             "role": "system",
-#             "content": "You are a helpful assistant that give me title and author of the book."
-#         },
-#     ]
-#     user_input = f"""Give me the title and author of the book in this structure: [name of the book] by [author of the book].
-# {page}"""
-#     message.append({"role": "user", "content": user_input})
-#     try:
-#         response = client.chat.completions.create(model=MODEL, messages=message)
-#     except Exception as e:
-#         print("Loi roi")
-#         exit(1)
-#     return response.choices[0].message.content
-
 def get_book_name(pdf_path):
     # Set API key
-    openai.api_key = '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'
+    openai.api_key = openai_api_key
     def detect_toc(text):
         prompt = (
             "You are an AI assistant. I will provide a text passage, please identify and extract only the Title and Author from it. Do not include any other content."
@@ -115,7 +78,7 @@ def get_book_name(pdf_path):
     return sample
 
 def extract_contents_from_image(pdf_path,model_path):
-    openai.api_key = 'your key'
+    openai.api_key = openai_api_key
     def detect_toc(text):
         prompt = (
             "You are an AI assistant. I will provide a text passage, "
@@ -297,11 +260,3 @@ def test(pdf):
 
     print(f"Title: {book_info}")
     print(f"Content: {content}")
-
-# test("/Users/admin/Code/AI_CHAT/lesson_plan/src/utils/William- Elementary differential equations and boundary value problems-7ed.pdf")
-
-# book_info = get_book_name("/Users/admin/Code/AI_CHAT/lesson_plan/src/utils/a.pdf")
-# print(book_info)
-
-# content = extract_contents_from_image("/Users/admin/Code/AI_CHAT/lesson_plan/src/utils/William- Elementary differential equations and boundary value problems-7ed.pdf", MODEL_PATH)
-# print(content)

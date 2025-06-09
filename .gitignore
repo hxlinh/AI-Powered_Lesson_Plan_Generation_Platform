@@ -18,6 +18,7 @@ src/utils/__pycache__
 /build
 
 # misc
+.env
 .DS_Store
 .env.local
 .env.development.local

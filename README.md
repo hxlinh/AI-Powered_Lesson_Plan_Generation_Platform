@@ -36,4 +36,3 @@ The platform operates through a sophisticated integration of AI and web technolo
 - Data is persistently stored and managed using **JSON files** on the backend, providing a flexible NoSQL-like database approach.
 - The **ReactJS frontend** provides an intuitive user experience, handling user inputs, displaying generated content, managing chat interactions, and presenting a side-by-side PDF viewer for reference during content generation and Q&A sessions.
 5. **Self-Improving Mechanism:**
-- The system incorporates a feedback loop where instructors can "Like" or adjust generated outputs. This feedback is implicitly or explicitly used to refine future generations, potentially through prompt engineering or data collection for future model retraining, contributing to the system's continuous improvement.
